@@ -64,9 +64,46 @@ The codes are based on [MMAction2](https://github.com/open-mmlab/mmaction2). You
 ## Training
 The training configs of different experiments are provided in `configs/recognition/vit/`. To run experiments, please use the following command. `PATH/TO/CONFIG` is the training config you want to use.
 ```shell
-bash tools/dist_train.sh PATH/TO/CONFIG 4 --test-last --validate --cfg-options work_dir=PATH/TO/OUTPUT
+bash tools/dist_train.sh <PATH/TO/CONFIG> <NUM_GPU> --test-last --validate --cfg-options work_dir=<PATH/TO/OUTPUT>
 ```
 We also provide a training script in `run_exp.sh`. You can simply change the training config to train different models.
+
+## Evaluation
+The code will do the evaluation after training. If you would like to evaluate a model only, please use the following command,
+```shell
+bash tools/dist_test.sh <PATH/TO/CONFIG> <CHECKPOINT_FILE> <NUM_GPU> --eval top_k_accuracy
+```
+
+## Models
+
+### Kinetics 400
+
+| Backbone |  Pretrain   | GFLOPs | Param | Tunable Param | acc@1 | acc@5 | Views |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| ViT-B/16 | CLIP | 606 | 97 | 11 | 83.9 | 96.3 | 8x3x1 |
+| ViT-B/16 | CLIP | 1214 | 97 | 11 | 84.5 | 96.6 | 16x3x1 |
+| ViT-B/16 | CLIP | 2428 | 97 | 11 | 84.7 | 96.7 | 32x3x1 |
+| ViT-L/14 | CLIP | 2902 | 341 | 38 | 86.8 | 97.2 | 8x3x1 |
+| ViT-L/14 | CLIP | 5604 | 341 | 38 | 87.3 | 97.6 | 16x3x1 |
+| ViT-L/14 | CLIP | 11208 | 341 | 38 | 87.5 | 97.7 | 32x3x1 |
+
+### Kinetics 700
+
+| Backbone |  Pretrain   | GFLOPs | Param | Tunable Param | acc@1 | Views |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| ViT-B/16 | CLIP | 7284 | 97 | 11 | 76.9 | 32x3x3 |
+| ViT-L/14 | CLIP | 33624 | 341 | 38 | 80.4 | 32x3x3 |
+
+### Diving-48
+
+| Backbone |  Pretrain   | GFLOPs | Param | Tunable Param | acc@1 | Views |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| ViT-B/16 | CLIP | 809 | 97 | 11 | 88.9 | 32x1x1 |
+| ViT-L/14 | CLIP | 3736 | 341 | 38 | 90.6 | 32x1x1 |
+
+## TODO
+
+- [ ] Pretrained model weights
 
 ## Security
 
