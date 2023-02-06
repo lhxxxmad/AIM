@@ -41,18 +41,7 @@ pip install -r requirements.txt
 # install mmaction2
 python setup.py develop
 ```
-
-## Data Preparation
-The codes are based on [MMAction2](https://github.com/open-mmlab/mmaction2). You can refer to [MMAction2](https://github.com/open-mmlab/mmaction2) for a general guideline on how to prepare the data. All the datasets (K400, K700, SSv2 and Diving-48) used in this work are supported in [MMAction2](https://github.com/open-mmlab/mmaction2).
-
-## Training
-The training configs of different experiments are provided in `configs/recognition/vit/`. To run experiments, please use the following command. `PATH/TO/CONFIG` is the training config you want to use.
-```shell
-bash tools/dist_train.sh PATH/TO/CONFIG 4 --test-last --validate --cfg-options work_dir=PATH/TO/OUTPUT
-```
-We also provide a training script in `run_exp.sh`. You can simply change the training config to train different models.
-
-### Apex (optional):
+### Install Apex:
 We use apex for mixed precision training by default. To install apex, please follow the instructions in the [repo](https://github.com/NVIDIA/apex).
 
 If you would like to disable apex, comment out the following code block in the [configuration files](configs/recognition/vit/):
@@ -68,6 +57,16 @@ optimizer_config = dict(
     use_fp16=True,
 )
 ```
+
+## Data Preparation
+The codes are based on [MMAction2](https://github.com/open-mmlab/mmaction2). You can refer to [MMAction2](https://github.com/open-mmlab/mmaction2) for a general guideline on how to prepare the data. All the datasets (K400, K700, SSv2 and Diving-48) used in this work are supported in [MMAction2](https://github.com/open-mmlab/mmaction2).
+
+## Training
+The training configs of different experiments are provided in `configs/recognition/vit/`. To run experiments, please use the following command. `PATH/TO/CONFIG` is the training config you want to use.
+```shell
+bash tools/dist_train.sh PATH/TO/CONFIG 4 --test-last --validate --cfg-options work_dir=PATH/TO/OUTPUT
+```
+We also provide a training script in `run_exp.sh`. You can simply change the training config to train different models.
 
 ## Security
 
