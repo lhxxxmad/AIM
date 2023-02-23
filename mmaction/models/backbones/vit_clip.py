@@ -76,8 +76,8 @@ class ResidualAttentionBlock(nn.Module):
     def forward(self, x: torch.Tensor):
         ## x shape [HW+1, BT, D]
         n, bt, d = x.shape
-        print('x shape', x.shape, self.num_frames)
         ## temporal adaptation
+        xt = rearrange(x, 'n (b t) d -> t (b n) d', t=self.num_frames)
         if self.num_tadapter == 2:
             xt = self.T_Adapter(self.attention(self.T_Adapter_in(self.ln_1(xt))))
         else:
