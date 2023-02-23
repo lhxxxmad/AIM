@@ -78,27 +78,27 @@ bash tools/dist_test.sh <PATH/TO/CONFIG> <CHECKPOINT_FILE> <NUM_GPU> --eval top_
 
 ### Kinetics 400
 
-| Backbone |  Pretrain   | GFLOPs | Param | Tunable Param | acc@1 | acc@5 | Views |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ViT-B/16 | CLIP | 606 | 97 | 11 | 83.9 | 96.3 | 8x3x1 |
-| ViT-B/16 | CLIP | 1214 | 97 | 11 | 84.5 | 96.6 | 16x3x1 |
-| ViT-B/16 | CLIP | 2428 | 97 | 11 | 84.7 | 96.7 | 32x3x1 |
-| ViT-L/14 | CLIP | 2902 | 341 | 38 | 86.8 | 97.2 | 8x3x1 |
-| ViT-L/14 | CLIP | 5604 | 341 | 38 | 87.3 | 97.6 | 16x3x1 |
-| ViT-L/14 | CLIP | 11208 | 341 | 38 | 87.5 | 97.7 | 32x3x1 |
+| Backbone |  Pretrain   | GFLOPs | Param | Tunable Param | acc@1 | acc@5 | Views | Checkpoint |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| ViT-B/16 | CLIP | 606 | 97 | 11 | 83.9 | 96.3 | 8x3x1 | [checkpoint](https://drive.google.com/file/d/1oRmpP47Z6jWq4NHEpONNGAeKgDTFVNEO/view?usp=share_link) |
+| ViT-B/16 | CLIP | 1214 | 97 | 11 | 84.5 | 96.6 | 16x3x1 | [checkpoint](https://drive.google.com/file/d/1QuCjDcQUNVyH8_LBjITQMUGIehogb_k8/view?usp=share_link) |
+| ViT-B/16 | CLIP | 2428 | 97 | 11 | 84.7 | 96.7 | 32x3x1 | [checkpoint](https://drive.google.com/file/d/1hwlxj51naOpY2WG9FosX45voQgpUbEn4/view?usp=share_link) |
+| ViT-L/14 | CLIP | 2902 | 341 | 38 | 86.8 | 97.2 | 8x3x1 | [checkpoint](https://drive.google.com/file/d/1pR6n2UxA3zJsWjAJhTJXJqaPEJYYfBOQ/view?usp=share_link) |
+| ViT-L/14 | CLIP | 5604 | 341 | 38 | 87.3 | 97.6 | 16x3x1 | [checkpoint](https://drive.google.com/file/d/1X7lqRYTbyMfO3L0zZXACEdIm21NU4Soc/view?usp=share_link) |
+| ViT-L/14 | CLIP | 11208 | 341 | 38 | 87.5 | 97.7 | 32x3x1 | [checkpoint](https://drive.google.com/file/d/1W1v53x8FAiVBTkAB0pIUUQUF-6hN_y2J/view?usp=share_link) |
 
 ### Kinetics 700
 
-| Backbone |  Pretrain   | GFLOPs | Param | Tunable Param | acc@1 | Views |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ViT-B/16 | CLIP | 7284 | 97 | 11 | 76.9 | 32x3x3 |
+| Backbone |  Pretrain   | GFLOPs | Param | Tunable Param | acc@1 | Views | Checkpoint |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| ViT-B/16 | CLIP | 7284 | 97 | 11 | 76.9 | 32x3x3 | [checkpoint](https://drive.google.com/file/d/1XG1BL81jx9ibJz7HNY8ZPke84FnIkbqz/view?usp=share_link) |
 | ViT-L/14 | CLIP | 33624 | 341 | 38 | 80.4 | 32x3x3 |
 
 ### Diving-48
 
-| Backbone |  Pretrain   | GFLOPs | Param | Tunable Param | acc@1 | Views |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ViT-B/16 | CLIP | 809 | 97 | 11 | 88.9 | 32x1x1 |
+| Backbone |  Pretrain   | GFLOPs | Param | Tunable Param | acc@1 | Views | Checkpoint |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| ViT-B/16 | CLIP | 809 | 97 | 11 | 88.9 | 32x1x1 | [checkpoint](https://drive.google.com/file/d/1YMEWV8HM0v1hkq3-35gNGjh_DMDeC-cn/view?usp=share_link) |
 | ViT-L/14 | CLIP | 3736 | 341 | 38 | 90.6 | 32x1x1 |
 
 ## TODO
