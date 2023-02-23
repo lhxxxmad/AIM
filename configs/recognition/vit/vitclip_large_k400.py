@@ -3,7 +3,7 @@ _base_ = [
 ]
 # model settings
 model = dict(
-    backbone=dict(patch_size=14,width=1024,layers=24,heads=16,drop_path_rate=0.2, adapter_scale=0.5, num_frames=8),
+    backbone=dict(patch_size=14,width=1024,layers=24,heads=16,drop_path_rate=0.2, adapter_scale=0.5, num_frames=16),
     cls_head=dict(in_channels=1024,num_classes=400),
     test_cfg=dict(max_testing_views=4))
 
@@ -18,7 +18,7 @@ img_norm_cfg = dict(
     mean=[122.769, 116.74, 104.04], std=[68.493, 66.63, 70.321], to_bgr=False)
 train_pipeline = [
     dict(type='DecordInit'),
-    dict(type='SampleFrames', clip_len=8, frame_interval=16, num_clips=1),
+    dict(type='SampleFrames', clip_len=16, frame_interval=16, num_clips=1),
     dict(type='DecordDecode'),
     dict(type='Resize', scale=(-1, 256)),
     dict(type='RandomResizedCrop'),
@@ -35,7 +35,7 @@ val_pipeline = [
     dict(type='DecordInit'),
     dict(
         type='SampleFrames',
-        clip_len=8,
+        clip_len=16,
         frame_interval=16,
         num_clips=1,
         test_mode=True),
@@ -52,7 +52,7 @@ test_pipeline = [
     dict(type='DecordInit'),
     dict(
         type='SampleFrames',
-        clip_len=8,
+        clip_len=16,
         frame_interval=16,
         num_clips=3,
         test_mode=True),
