@@ -6,9 +6,9 @@ If you find our work useful in your research, please cite:
 ```
 @inproceedings{
     yang2023aim,
-    title={AIM: Adapting Image Models for Efficient Video Understanding},
+    title={{AIM}: Adapting Image Models for Efficient Video Action Recognition},
     author={Taojiannan Yang and Yi Zhu and Yusheng Xie and Aston Zhang and Chen Chen and Mu Li},
-    booktitle={International Conference on Learning Representations},
+    booktitle={The Eleventh International Conference on Learning Representations },
     year={2023},
     url={https://openreview.net/forum?id=CIoSZ_HKHS7}
 }
