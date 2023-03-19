@@ -1,6 +1,6 @@
-# AIM: Adapting Image Models for Efficient Video Understanding
+# AIM: Adapting Image Models for Efficient Video Action Recognition
 
-This repo is the official implementation of ["AIM: Adapting Image Models for Efficient Video Understanding"](https://openreview.net/forum?id=CIoSZ_HKHS7&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2023%2FConference%2FAuthors%23your-submissions)) at ICLR 2023.
+This repo is the official implementation of ["AIM: Adapting Image Models for Efficient Video Action Recognition"](https://openreview.net/pdf?id=CIoSZ_HKHS7) at ICLR 2023.
 
 If you find our work useful in your research, please cite:
 ```
