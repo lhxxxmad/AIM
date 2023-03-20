@@ -62,7 +62,7 @@ optimizer_config = dict(
 The codes are based on [MMAction2](https://github.com/open-mmlab/mmaction2). You can refer to [MMAction2](https://github.com/open-mmlab/mmaction2) for a general guideline on how to prepare the data. All the datasets ([K400](https://github.com/open-mmlab/mmaction2/blob/master/tools/data/kinetics/README.md), [K700](https://github.com/open-mmlab/mmaction2/blob/master/tools/data/kinetics/README.md), [SSv2](https://github.com/open-mmlab/mmaction2/blob/master/tools/data/sthv2/README.md) and [Diving-48](https://github.com/open-mmlab/mmaction2/blob/master/tools/data/diving48/README.md)) used in this work are supported in [MMAction2](https://github.com/open-mmlab/mmaction2).
 
 ## Training
-The training configs of different experiments are provided in `configs/recognition/vit/`. To run experiments, please use the following command. `PATH/TO/CONFIG` is the training config you want to use.
+The training configs of different experiments are provided in `configs/recognition/vit/`. To run experiments, please use the following command. `PATH/TO/CONFIG` is the training config you want to use. The default training setting is 8GPU with a batchsize of 64.
 ```shell
 bash tools/dist_train.sh <PATH/TO/CONFIG> <NUM_GPU> --test-last --validate --cfg-options work_dir=<PATH/TO/OUTPUT>
 ```
