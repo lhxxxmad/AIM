@@ -68,6 +68,10 @@ bash tools/dist_train.sh <PATH/TO/CONFIG> <NUM_GPU> --test-last --validate --cfg
 ```
 We also provide a training script in `run_exp.sh`. You can simply change the training config to train different models.
 
+### Key Files
+- The model is implemented in https://github.com/taoyang1122/adapt-image-models/blob/main/mmaction/models/backbones/vit_clip.py. You may refer to it on how to apply AIM to your model.
+- The weights are frozen at https://github.com/taoyang1122/adapt-image-models/blob/main/tools/train.py#L187.
+
 ## Evaluation
 The code will do the evaluation after training. If you would like to evaluate a model only, please use the following command,
 ```shell
