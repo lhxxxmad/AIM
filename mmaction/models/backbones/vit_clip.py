@@ -196,7 +196,6 @@ class ViT_CLIP(nn.Module):
         return {'relative_position_bias_table', 'temporal_position_bias_table'}
 
     def forward(self, x: torch.Tensor):
-        ## Space-only
         B, C, T, H, W = x.shape
         x = rearrange(x, 'b c t h w -> (b t) c h w')
         x = self.conv1(x)  
