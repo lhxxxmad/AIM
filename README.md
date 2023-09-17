@@ -67,7 +67,7 @@ The codes are based on [MMAction2](https://github.com/open-mmlab/mmaction2). You
 ## Training
 The training configs of different experiments are provided in `configs/recognition/vit/`. To run experiments, please use the following command. `PATH/TO/CONFIG` is the training config you want to use. The default training setting is 8GPU with a batchsize of 64.
 ```shell
-bash tools/dist_train.sh <PATH/TO/CONFIG> <NUM_GPU> --test-last --validate --cfg-options work_dir=<PATH/TO/OUTPUT>
+bash tools/dist_train.sh <PATH/TO/CONFIG> <NUM_GPU> --test-last --validate --cfg-options model.backbone.pretrained=openaiclip work_dir=<PATH/TO/OUTPUT>
 ```
 We also provide a training script in `run_exp.sh`. You can simply change the training config to train different models.
 
