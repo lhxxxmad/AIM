@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Training
-bash tools/dist_train.sh configs/recognition/vit/vitclip_base_diving48.py 8 --test-last --validate \
+bash tools/dist_train.sh configs/recognition/aim/base_k400_8x3x1.py 8 --test-last --validate \
 --cfg-options model.backbone.pretrained=openaiclip work_dir=work_dirs_vit/diving48/debug
 
 # Evaluation only
