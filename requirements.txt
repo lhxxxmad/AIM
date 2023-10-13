@@ -7,3 +7,4 @@ scipy==1.7.3
 einops==0.4.1
 pyyaml
 yapf
+tkinter
